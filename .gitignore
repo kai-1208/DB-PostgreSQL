@@ -1,0 +1,36 @@
+# Environment variables
+.env*
+!.env.dummy
+
+# Book sample codes
+sql/book/*
+!sql/book/.gitkeep
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Build output
+/dist/*
+!/dist/.gitkeep
+
+# Local scratch files
+/local/*
+!/local/.gitkeep
+
+# Claude Code
+CLAUDE.md
+/.claude/*
+
+# Codex AI agent instructions
+AGENTS.md
+/.agents/*
+
+# Temporary files
+/tmp/*
+
+# Personal notes
+/memo.txt

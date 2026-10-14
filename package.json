@@ -1,0 +1,34 @@
+{
+  "name": "db-postgresql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch",
+    "sql": "tsx scripts/sqlFileRunner.ts",
+    "sql:en": "tsx scripts/sqlFileRunner.ts --en",
+    "db:up": "docker compose -f docker/docker-compose.yaml -p pg18dev up -d --wait",
+    "db:down": "docker compose -f docker/docker-compose.yaml -p pg18dev down",
+    "db:reset": "docker compose -f docker/docker-compose.yaml -p pg18dev down -v"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.2",
+    "@types/pg": "^8.23.1",
+    "eslint": "^10.11.0",
+    "globals": "^17.12.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.1"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.7",
+    "drizzle-orm": "^0.45.4",
+    "pg": "^8.23.1"
+  }
+}
